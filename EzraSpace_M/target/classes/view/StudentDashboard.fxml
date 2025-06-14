@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.StudentDashboardController"
+           prefHeight="600.0" prefWidth="800.0">
+    <ImageView preserveRatio="false">
+        <image>
+            <Image url="@../images/student_backgr.jpeg"/>
+        </image>
+    </ImageView>
+
+    <AnchorPane>
+        <children>
+            <Label layoutX="20" layoutY="20" text="Classrooms" style="-fx-font-size: 24px;"/>
+            <ListView fx:id="roomsListView" layoutX="20" layoutY="60" prefWidth="300" prefHeight="400"/>
+
+            <Label layoutX="350" layoutY="60" text="Date:"/>
+            <DatePicker fx:id="datePicker" layoutX="400" layoutY="60"/>
+
+            <Label layoutX="350" layoutY="100" text="Available Time Slots:"/>
+            <ListView fx:id="availableTimesListView" layoutX="350" layoutY="130" prefWidth="300" prefHeight="200"/>
+
+            <Button fx:id="bookButton" layoutX="350" layoutY="350" text="Book Room" prefWidth="200"/>
+            <Label fx:id="statusLabel" layoutX="350" layoutY="400" prefWidth="400" style="-fx-text-fill: red;"/>
+            <Button fx:id="logoutButton" layoutX="350" layoutY="450" text="Logout" prefWidth="200"/>
+        </children>
+    </AnchorPane>
+</StackPane>
